@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="The Interurbs — family activities and community events for north Seattle. Shoreline, Lake Forest Park, Richmond Beach and beyond."/>
+<title>The Interurbs — North Seattle Family Events</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<style>
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">The Interurbs</a>
+  <div class="nav-links">
+    <a class="nav-link" href="#newsletter">Newsletter</a>
+    <a class="nav-link" href="#archive">Past issues</a>
+  </div>
+  <a class="nav-cta" href="#newsletter">Subscribe free</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-eyebrow">Shoreline · Lake Forest Park · Richmond Beach</span>
+  <h1 class="hero-title">What's on for<br><em>north Seattle families</em></h1>
+  <p class="hero-sub">A free weekly roundup of the best family activities, events and hidden gems happening in your neighborhood — curated every Thursday.</p>
+
+  <div class="signup-card" id="newsletter">
+    <div class="signup-label">Get it in your inbox</div>
+    <div class="signup-hint">Free · Weekly · No spam · Unsubscribe anytime</div>
+    <div class="signup-row">
+      <input class="signup-input" type="email" id="email-input" placeholder="your@email.com"/>
+      <button class="signup-btn" onclick="handleSignup()">Subscribe →</button>
+    </div>
+    <div class="signup-success" id="signup-success">You're in! Check your inbox for a welcome note.</div>
+    <p class="signup-note">Join families across north Seattle · theinterurbs.beehiiv.com</p>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="about-inner">
+    <div class="about-item">
+      <div class="about-num">Weekly</div>
+      <div class="about-desc">Every Thursday, ready for your weekend planning</div>
+    </div>
+    <div class="about-item">
+      <div class="about-num">Free</div>
+      <div class="about-desc">Always free — no paywalls, no algorithms</div>
+    </div>
+    <div class="about-item">
+      <div class="about-num">Local</div>
+      <div class="about-desc">Shoreline to Edmonds, not generic Seattle</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ARCHIVE SECTION -->
+<section class="section" id="archive">
+  <div class="section-header">
+    <div class="section-eyebrow">Archive</div>
+    <h2 class="section-title">Past issues</h2>
+    <p class="section-sub">Every issue lives online — browse what you missed or share a specific week with a friend.</p>
+  </div>
+
+  <div class="archive-card">
+    <a class="archive-row" href="https://beehiiv.com/theinterurbs" target="_blank">
+      <div>
+        <div class="archive-issue">Issue #01</div>
+        <div class="archive-title">What's on this weekend — Lantern Festival &amp; more</div>
+        <div class="archive-date">March 13, 2026</div>
+      </div>
+      <span class="archive-arrow">→</span>
+    </a>
+    <div class="archive-footer">
+      <a class="archive-all" href="https://beehiiv.com/theinterurbs" target="_blank">See all issues on Beehiiv →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">The Interurbs</div>
+  <div class="footer-sub">Family activities & community for north Seattle · Shoreline, Lake Forest Park, Richmond Beach and beyond</div>
+  <div class="footer-links">
+    <a class="footer-link" href="#newsletter">Subscribe</a>
+    <a class="footer-link" href="#archive">Archive</a>
+    <a class="footer-link" href="mailto:hello@theinterurbs.com">hello@theinterurbs.com</a>
+  </div>
+</footer>
+
+<script>
+  function handleSignup() {
+    const val = document.getElementById('email-input').value;
+    if (!val || !val.includes('@')) {
+      document.getElementById('email-input').focus();
+      return;
+    }
+    document.querySelector('.signup-row').style.display = 'none';
+    document.querySelector('.signup-note').style.display = 'none';
+    document.getElementById('signup-success').style.display = 'block';
+  }
+
+
